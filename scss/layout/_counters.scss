@@ -1,0 +1,36 @@
+.counters {
+  display: block;
+  padding: $global-padding 0 $global-padding - gutter();
+  background-color: $light-gray;
+}
+
+.counters__wrap {
+  @include container();
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.counters__counter-item {
+  flex: 1 0 auto;
+  width: (100% / 2);
+  margin-bottom: gutter();
+}
+
+@include susy-at($small) {
+
+
+  .counters {
+    padding: $global-padding * 2 0 $global-padding * 2 - gutter();
+  }
+
+  .counters__counter-item {
+    margin-bottom: gutter();
+    width: (100% / 3);
+    border-right: 2px solid $medium-gray;
+
+    &:nth-child(3n) {
+      border-right: 0;
+    }
+  }
+
+}

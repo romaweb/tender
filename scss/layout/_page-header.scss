@@ -1,0 +1,143 @@
+.page-header {
+  display: block;
+  padding: $global-padding / 4;
+  background-color: $white;
+  box-shadow: $global-shadow;
+}
+
+.page-header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include container();
+}
+
+.page-header__page-logo {
+  flex: 0 0 auto;
+  width: 160px;
+  margin-right: gutter();
+}
+
+.page-header__btn {
+  margin-bottom: $global-margin / 2;
+}
+
+.page-header__info-toggle {
+  flex: 0 0 auto;
+}
+
+
+.page-header__info {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // width: 250px;
+  padding: $global-padding * 2 gutter() $global-padding;
+  z-index: 8;
+  right: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+  transform: translateY(-100%);
+  background-color: $white;
+  transition: $global-transition;
+
+  &--active {
+    transform: translateY(0);
+  }
+
+  &--no-js {
+    width: 100%;
+    padding: 0;
+    position: static;
+    transform: none;
+
+    .page-header__info-close {
+      display: none;
+    }
+  }
+}
+
+.page-header__info-close {
+  position: absolute;
+  right: gutter();
+  top: $global-padding / 2;
+}
+
+.page-header__contacts {
+  margin: 0 auto;
+  margin-bottom: $global-margin;
+
+}
+
+.page-header__contact-item {
+  margin-bottom: $global-margin / 2;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+
+@include susy-at($small) {
+
+  .page-header {
+    padding: $global-padding / 3;
+  }
+
+  .page-header__page-logo {
+    width: 230px;
+  }
+
+}
+
+@include susy-at($medium) {
+
+
+  .page-header__contacts {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .page-header__contact-item {
+    margin-bottom: 0;
+    margin-right: gutter();
+  }
+
+}
+
+@include susy-at($large) {
+
+  .page-header__info {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+    position: static;
+    transform: none;
+    overflow: hidden;
+  }
+
+  .page-header__info-toggle {
+    display: none;
+  }
+
+  .page-header__info-close {
+    display: none;
+  }
+
+  .page-header__contacts {
+    margin-bottom: 0;
+  }
+
+  .page-header__btn {
+    margin-bottom: 0;
+    margin-right: gutter() / 3;
+  } 
+
+}

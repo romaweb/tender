@@ -1,0 +1,57 @@
+.application-page {
+  padding-bottom: $global-padding;
+  background-color: $light-gray;
+}
+
+.application-page__wrap {
+  @include container(480px);
+}
+
+.application-page__application-form {
+  position: relative;
+  z-index: 3;
+  margin-top: -$global-margin;
+  margin-bottom: $global-margin / 1.5;
+}
+
+// @include susy-at($xsmall) {
+
+//   .application-page__wrap {
+//     @include container(520px);
+//   } 
+
+// }
+@include susy-at($small) {
+
+  .application-page {
+    padding-bottom: $global-padding * 2;
+  }
+
+  // .application-page__wrap {
+  //   @include container(620px);
+  // } 
+
+
+}
+
+@include susy-at($medium) {
+
+//   .tender-page {
+//     padding-bottom: $global-padding * 2;
+//   }
+
+  .application-page__wrap {
+    @include container(580px);
+  } 
+
+
+}
+
+// @include susy-at($medium) {
+
+//   .answer-form {
+//     width: span(8);
+//   }
+
+// }
+

@@ -1,0 +1,132 @@
+.application-form {
+  width: 100%;
+  padding: $global-padding / 1.5 gutter() * 2;
+  background-color: $white;
+  box-shadow: $global-shadow;
+}
+
+.application-form__heading {
+	@include sub-heading();
+  margin-bottom: $global-margin / 1.5;
+  color: $black;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.application-form__field {
+  width: 100%;
+  margin-bottom: $global-margin;
+  position: relative;
+
+	p {
+		margin: 0;
+		width: 100%;
+		font-size: $small-font-size;
+		line-height: 1;
+		position: absolute;
+		top: 105%;
+		text-align: left;
+		color: $primary-color;
+		// background-color: $secondary-color;
+	}
+
+	.help-block-error {
+		color: $error-color;
+	}
+}
+
+// .application-form__field-wrap {
+// 	margin-bottom: $global-margin / 1.2;
+
+	
+// }
+
+// .application-form__field--halfwidth {
+// 	margin-bottom: $global-margin / 1.2;
+
+// 	&:last-child {
+// 		margin-bottom: 0;
+// 	}
+// }
+
+.application-form__btn {
+	margin-bottom: $global-margin / 2;
+}
+
+// .application-form__text {
+// 	display: block;
+// 	margin: 0;
+
+// 	a {
+// 		text-decoration: none;
+// 		color: $secondary-color;
+// 		transition: $global-transition;
+// 		font-weight: $global-weight-bold;
+
+// 		&:hover {
+// 			color: $primary-color;
+// 		}
+// 	}
+// }
+
+.application-form__text {
+	display: block;
+	margin: 0;
+}
+
+.application-form__text-item {
+	margin: 0;
+	display: block;
+	margin-bottom: $global-margin / 10;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.application-form__text-lnk {
+	font-weight: $global-weight-bold;
+	text-decoration: none;
+	color: $primary-color;
+	transition: $global-transition;
+
+	&:hover {
+		color: $secondary-color;
+	}
+
+	&--secondary {
+		color: $secondary-color;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
+
+@include susy-at($small) {
+
+	.application-form__heading {
+    font-size: 2.6rem;
+  }
+
+}
+
+@include susy-at($medium) {
+
+	.application-form__text{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.application-form__text-item {
+		margin: 0;
+
+		&:first-child {
+			margin-right: gutter();
+		}
+	}
+
+
+}
+

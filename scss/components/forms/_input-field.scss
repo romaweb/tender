@@ -1,0 +1,27 @@
+.input-field {
+	@include input-field();
+	width: 100%;
+	background-color: $light-gray;
+	padding: $global-padding / 2.8 $global-padding / 2;
+	border: 1px solid $medium-gray;
+	color: $black;
+	border-radius: $global-radius;
+	box-shadow: $global-shadow;
+
+	&::placeholder {
+		color: darken($medium-gray, 21);
+	}
+
+	&:focus {
+		border-color: $primary-color;
+		background: $white;
+	}
+}
+
+@include breakpoint(small) {
+
+	.input-field {
+		padding: $global-padding / 2.2 $global-padding / 2;
+	}
+
+}

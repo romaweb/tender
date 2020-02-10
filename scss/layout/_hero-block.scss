@@ -1,0 +1,51 @@
+.hero-block {
+  position: relative;
+  background: $secondary-color url('../img/hero-bg.jpg') no-repeat fixed center center;
+  background-size: cover; 
+  padding: $global-padding * 2 0;
+  z-index: 0;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($secondary-color, .65);
+  }
+
+}
+
+.hero-block__wrap {
+  @include container();
+}
+
+.hero-block__slogan {
+  @include heading();
+  margin-bottom: $global-margin / 1.5;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: $global-weight-extra-bold;
+
+  mark {
+    color: $primary-color;
+    background: transparent;
+  }
+}
+
+@include susy-at($small) {
+
+  .hero-block {
+    padding: $global-padding * 6 0;
+  }
+
+  .hero-block__slogan {
+    font-size: 8rem;
+    margin-bottom: $global-margin * 2;
+  }
+}

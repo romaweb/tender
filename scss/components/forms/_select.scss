@@ -1,0 +1,48 @@
+// Custom Select
+// ==========================
+//
+
+.custom-select {
+	position: relative;
+	width: 100%;
+
+	select {
+		@include input-field();
+		background-color: transparent;
+		padding:  $global-padding / 4 gutter() $global-padding / 3 gutter() / 2; 
+		border: 3px solid $primary-accent-color;
+		resize: none;
+		color: inherit;
+		appearance: none;
+		-webkit-appearance: none;
+
+		// &::placeholder {
+		// 	color: $medium-gray;
+		// }
+	
+		&:focus {
+			border-color: $secondary-color;
+		}
+	}
+
+
+	&:after {
+		content: '';
+		@include triangle(bottom, 7px, 5px, $secondary-color);
+		@include center-y();
+		right: gutter() / 3;
+		// top: 8px;
+	}
+}
+
+@include breakpoint(small) {
+
+	.custom-select {
+
+		select {
+			padding:  $global-padding / 3 gutter() $global-padding / 3 gutter() / 2; 
+		}
+	}
+
+}
+

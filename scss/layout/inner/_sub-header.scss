@@ -1,0 +1,32 @@
+.sub-header {
+  position: relative;
+  background: $secondary-color url('../img/hero-bg.jpg') no-repeat fixed center center;
+  background-size: cover; 
+  padding: $global-padding * 1.5 0;
+  z-index: 0;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($secondary-color, .95);
+  }
+
+}
+
+.sub-header__breadcrumbs {
+  margin-bottom: $global-margin / 2;
+}
+
+@include susy-at($small) {
+
+  .sub-header {
+    padding: $global-padding * 2 0;
+  }
+
+}

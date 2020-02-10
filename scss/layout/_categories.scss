@@ -1,0 +1,54 @@
+.categories {
+  padding: $global-padding 0;
+}
+
+.categories__wrap {
+  @include container();
+}
+
+.categories__category-item {
+  margin-bottom: gutter();
+}
+
+@include susy-at($xsmall) {
+
+  .categories {
+    padding: $global-padding * 2 0 $global-padding * 2 - gutter();
+    
+  }
+
+  .categories__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  .categories__category-item {
+    width: span(3);
+    margin-right: gutter();
+    margin-bottom: gutter();
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+}
+
+@include susy-at($medium) {
+
+  .categories__category-item {
+    width: span(4);
+    margin-right: gutter();
+    margin-bottom: gutter();
+
+    &:nth-child(2n) {
+      margin-right: gutter();
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+}

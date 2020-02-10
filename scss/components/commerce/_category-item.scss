@@ -1,0 +1,41 @@
+.category-item {
+  display: block;
+  width: 100%;
+  padding: $global-padding / 2;
+  box-shadow: $global-shadow;
+}
+
+.category-item__icon {
+  display: block;
+  margin: auto;
+  margin-bottom: $global-margin / 3;
+  width: 65px;
+  height: 65px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: $secondary-color;
+  }
+}
+
+.category-item__heading {
+  @include sub-heading();
+  margin-bottom: $global-margin / 8;
+  color: $black;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.category-item__descr {
+  text-align: center;
+  margin: 0;
+}
+
+@include susy-at($small) {
+
+  .category-item__heading {
+    font-size: 2.2rem;
+  }
+
+}

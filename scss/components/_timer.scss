@@ -1,0 +1,58 @@
+.timer {
+  margin: 0;
+  width: 100%;
+}
+
+.timer__heading {
+  @include heading();
+  margin-bottom: $global-margin / 4;
+  font-size: 2.2rem;
+  text-align: center;
+  color: $black;
+}
+
+.timer__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.timer__item {
+  padding: 0 gutter();
+  border-right: 1px solid $medium-gray;
+
+  &:last-child {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+}
+
+.timer__item-value {
+  @include heading();
+  font-size: 3rem;
+  text-align: center;
+  color: $secondary-color;
+}
+
+.timer__item-name {
+  display: block;
+  font-weight: normal;
+  text-align: center;
+}
+
+@include susy-at($small) {
+
+  .timer__item-value {
+    font-size: 5.2rem;
+  }
+  
+
+  .timer__heading {
+    font-size: 2.6rem;
+  }
+  
+}

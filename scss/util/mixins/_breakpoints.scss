@@ -1,0 +1,46 @@
+@mixin breakpoint($breakpoint, $width: min-width) { 
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and ($width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+ 
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin susy-use($config) {
+
+  $config: susy-compile($config);
+
+  $global: $susy;
+  $susy: map-merge($susy, $config) !global;
+
+  @content;
+
+  $susy: $global !global;
+}
+
+@mixin susy-at($config) {
+
+  $config: susy-compile($config);
+
+
+  $min: map-get($config, 'min-width');
+  $min: if($min, 'min-width: #{$min}', null);
+  $max: map-get($config, 'max-width');
+  $max: if($max, 'max-width: #{$max}', null);
+
+  $and: if($min and $max, '#{$min} and #{$max}', null);
+
+  $query: $and or $min or $max;
+
+
+  @media only screen and (#{$query}) {
+    @include susy-use($config) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.counter-item {
+  display: block;
+  width: 100%;
+  padding: 0 gutter();
+
+  &:nth-child(2n) {
+
+    .counter-item__number {
+      color: $secondary-color;
+    }
+    
+  }
+}
+
+.counter-item__number {
+  @include heading();
+  font-family: $body-font-family;
+  color: $primary-color;
+  font-size: 3.8rem;
+  text-align: center;
+}
+
+.counter-item__text {
+  margin: 0;
+  display: block;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+@include susy-at($small) {
+
+  .counter-item__number {
+    font-size: 8rem;
+  }
+
+  .counter-item__text {
+    font-size: 1.8rem;
+  }
+
+}

@@ -1,0 +1,52 @@
+.section-heading {
+  @include container();
+  display: block;
+  margin-bottom: $global-margin;
+
+  &--nopadding {
+    padding: 0;
+  }
+
+  &--nomargin {
+    margin-bottom: 0;
+  }
+}
+
+.section-heading__text {
+  @include heading();
+  margin-bottom: $global-margin / 4;
+  color: $heading-color;
+  text-align: center;
+  font-size: 3rem;
+
+  mark {
+    color: $primary-color;
+    background: transparent;
+  }
+
+  &--white {
+    color: $white;
+  }
+}
+
+.section-heading__descr {
+  margin: 0;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+@include susy-at($small) {
+
+  .section-heading {
+    margin-bottom: $global-margin * 1.5;
+
+    &--nomargin {
+      margin-bottom: 0;
+    }
+  }
+
+  .section-heading__text {
+    font-size: 4.8rem;
+  }
+
+}

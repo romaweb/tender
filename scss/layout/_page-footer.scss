@@ -1,0 +1,137 @@
+.page-footer {
+  position: relative;
+  background: $secondary-color url('../img/footer-bg.jpg') no-repeat center center;
+  background-size: cover; 
+  // padding: $global-padding * 2 0;
+  z-index: 0;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    // background-color: rgba($secondary-color, .65);
+    background-color: rgba($black, .9);
+  }
+}
+
+// .page-footer__top {
+//   padding: $global-padding / 2 0;
+// }
+
+// .page-footer__bottom {
+//   padding: $global-padding / 2 0;
+// }
+
+.page-footer__top-wrap {
+  @include container();
+  padding-top: $global-padding;
+  padding-bottom: $global-padding;
+  border-bottom: 1px solid $light-gray;
+}
+
+
+.page-footer__bottom-wrap {
+  @include container();
+  padding-top: $global-padding;
+  padding-bottom: $global-padding;
+}
+
+.page-footer__copyright {
+  margin: 0;
+  color: $white;
+  font-size: $small-font-size;
+
+  a {
+    color: $white;
+    text-decoration: none;
+    transition: $global-transition;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.page-footer__content {
+  margin-bottom: $global-margin / 1.5;
+}
+.page-footer__page-logo {
+  width: 160px;
+  margin-bottom: $global-margin / 4;
+}
+
+.page-fotter__text {
+  margin: 0;
+  margin-bottom: $global-margin / 2;
+  color: $white;
+}
+
+.page-footer__contact-item {
+  margin-bottom: $global-margin / 2;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__contact-form {
+  margin-bottom: $global-margin / 1.5;
+}
+
+@include susy-at($small) {
+
+  .page-footer__top-wrap {
+    // padding-top: $global-padding / 1.5;
+    // padding-bottom: $global-padding / 1.5;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .page-footer__bottom-wrap {
+    // padding-top: $global-padding / 1.5;
+    // padding-bottom: $global-padding / 1.5;
+  }
+
+  .page-footer__page-logo {
+    width: 220px;
+  }
+
+  .page-footer__content {
+    width: span(3);
+  }
+
+  .page-footer__contact-form {
+    width: span(3);
+  }
+  
+
+}
+
+@include susy-at($medium) {
+
+  .page-footer__top-wrap {
+    flex-wrap: nowrap;
+  }
+
+  .page-footer__content {
+    width: span(4);
+    margin: 0;
+  }
+
+  .page-footer__contact-form {
+    width: span(5);
+    margin: 0;
+  }
+
+  .page-footer__additional-nav {
+    width: span(3);
+  }
+
+}

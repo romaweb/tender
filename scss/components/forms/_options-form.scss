@@ -1,0 +1,65 @@
+.options-form {
+  width: 100%;
+  padding: $global-padding / 1.5 gutter() * 2;
+  background-color: $white;
+  box-shadow: $global-shadow;
+}
+
+.options-form__heading {
+	@include sub-heading();
+  margin-bottom: $global-margin / 1.5;
+  color: $black;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.options-form__field {
+  width: 100%;
+  margin-bottom: $global-margin;
+  position: relative;
+
+	p {
+		margin: 0;
+		width: 100%;
+		font-size: $small-font-size;
+		line-height: 1;
+		position: absolute;
+		top: 105%;
+		text-align: left;
+		color: $primary-color;
+	}
+
+	.help-block-error {
+		color: $error-color;
+	}
+}
+
+.options-form__text {
+  margin: 0;
+  display: block;
+}
+
+.options-form__text-lnk {
+	font-weight: $global-weight-bold;
+	text-decoration: none;
+	color: $primary-color;
+	transition: $global-transition;
+
+	&:hover {
+		color: $secondary-color;
+  }
+}
+
+.options-form__btn {
+	margin-bottom: $global-margin / 2;
+}
+
+@include susy-at($small) {
+
+	.options-form__heading {
+    font-size: 2.6rem;
+  }
+
+}
+
+

@@ -1,0 +1,127 @@
+// Buttons
+// ==========================
+//
+
+.btn {
+	@include btn();
+	// margin: auto;
+	padding: $global-padding / 2.8 $global-padding / 2;
+	// border: 3px solid $primary-color;
+	color: $white;
+	font-family: $heading-font-family;
+	font-weight: $global-weight-bold;
+	background-color: $primary-color;
+	font-size: 1.6rem;
+	// box-shadow: $global-shadow;
+	// text-transform: uppercase;
+	border-radius: $global-radius;
+	transition: $global-transition;
+	box-shadow: $global-shadow;
+	
+	&:hover {
+		text-decoration: none;
+		// box-shadow: $global-shadow-hover;
+		// color: $black;
+		background: $secondary-color;
+		// box-shadow: 0 0px 0px 60px $black inset;
+	
+	}
+
+	&--secondary {
+		background: $secondary-color;
+
+		&:hover {
+			background: $primary-color;
+		}
+	}
+
+	&:active,
+	&:visited {
+		color: $white;
+	}
+
+	// &--wide {
+	// 	width: 100%;
+	// }
+
+	&--small {
+		padding: $global-padding / 3.5 $global-padding / 3;
+		font-size: 1.4rem;
+	}
+
+
+	&--disabled {
+		cursor: not-allowed;
+		opacity: .7;
+	}
+
+	&--center {
+		margin: auto;
+	}
+
+	// &--full {
+	// 	background-color: $primary-color;
+	// 	color: $white;
+
+	// 	&:hover {
+	// 		background-color: transparent;
+	// 		color: $primary-color;
+	// 	}
+	// }
+
+	// &--secondary {
+	// 	background-color: $secondary-color;
+
+	// 	&:hover {
+	// 		background-color: $secondary-color;
+	// 	}
+	// }
+
+	&--facebook {
+		background: #4267b2;
+	}
+
+	&--viber {
+		background: #574e92;
+	}
+
+	&--whatsapp {
+		background: #00e676;
+	}
+	// &--error {
+	// 	background-color: $error-color;
+
+	// 	&:hover {
+	// 		background-color: lighten($error-color, 17%);
+	// 	}
+	// }
+
+	// &--warning {
+	// 	background-color: $warning-color;
+
+	// 	&:hover {
+	// 		background-color: lighten($warning-color, 17%);
+	// 	}
+	// }
+
+	// &--success {
+	// 	background-color: $success-color;
+		
+	// 	&:hover {
+	// 		background-color: lighten($success-color, 17%);
+	// 	}
+
+	// }
+}
+
+@include susy-at($small) {
+
+	.btn {
+		padding: $global-padding / 2.2 $global-padding / 1.2;
+
+		&--small {
+			padding: $global-padding / 2.6 $global-padding / 2;
+		}
+	}
+
+}

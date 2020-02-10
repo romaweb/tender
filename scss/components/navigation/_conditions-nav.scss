@@ -1,0 +1,26 @@
+.conditions-nav {
+  display: block;
+}
+
+.conditions-nav__lnk {
+  display: block;
+  margin-bottom: $global-margin / 8;
+  padding-bottom: $global-padding / 5;
+  border-bottom: 1px solid $medium-gray;
+  transition: $global-transition;
+  text-decoration: none;
+  color: $white;
+  font-weight: $global-weight-semi-bold;
+  font-size: $small-font-size;
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: none;
+  }
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
