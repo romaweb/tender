@@ -278,20 +278,13 @@
 
 			<!-- answer-form -->
 			<form action="" class="answer-form tender-page__answer-form">
-				<b class="answer-form__heading">Принять участие</b>
+				<b class="answer-form__heading">Ваше предложение</b>
 				<div class="answer-form__field-wrap">
-					<div class="answer-form__field answer-form__field--halfwidth">
-						<input type="text" class="input-field contact-form__input-field" placeholder="Название компании">
-						<!-- <p class="help-block-error">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>	 -->
-					</div>
-					<div class="answer-form__field answer-form__field--halfwidth">
-						<input type="text" class="input-field" placeholder="Цена (грн.)">
-					</div>
+					<input type="number" min="1" class="input-field" placeholder="Цена (число без знака валюты, 'грн' ... )">
+					<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
 				</div>
 				<div class="answer-form__field-wrap">
-					<div class="answer-form__field">
-						<textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Примичание"></textarea>
-					</div>
+					<textarea name="" id="" cols="30" rows="10" class="textarea" placeholder="Примичание"></textarea>
 				</div>
 				<button class="btn btn--secondary">Отправить</button>
 		</form>

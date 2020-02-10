@@ -3,7 +3,7 @@
 	width: 100%;
 	height: 120px;
 	background-color: $light-gray;
-	padding: $global-padding / 2.8 $global-padding / 2;
+	padding: $global-padding / 2.8 $global-padding / 4;
 	border: 1px solid $medium-gray;
 	color: $black;
 	border-radius: $global-radius;
@@ -22,7 +22,7 @@
 @include breakpoint(small) {
 
 	.textarea {
-		padding: $global-padding / 2.2 $global-padding / 2;
+		padding: $global-padding / 2.2 $global-padding / 3;
 	}
 
 }
