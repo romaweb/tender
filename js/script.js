@@ -36,4 +36,20 @@ let paginatorDisabled = document.querySelectorAll('.paginator__item--disabled');
 		}
   }
 
-		
+    
+  
+  //form msg popup
+let formMsgPopup = document.querySelector('.msg-popup'),
+    formMsgPopupClose = document.querySelector('.msg-popup__close');
+
+if (formMsgPopup && formMsgPopupClose) {
+
+  formMsgPopupClose.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // setTimeout(function(){
+    formMsgPopup.classList.remove('msg-popup--active');
+  // },800);
+
+  });
+}

@@ -1,0 +1,64 @@
+.msg-popup {
+  position: fixed;
+  padding: $global-padding / 1.5 0;
+  padding-right: 43px;
+  z-index: 8;
+  top: -100%;
+  right: 0;
+  left: 0;
+  background-color: $white;
+  border-bottom: 4px solid $primary-color;
+  transition: $global-transition;
+
+  &--active {
+    top: 0;
+  }
+}
+
+.msg-popup__wrap {
+  @include container();
+  position: relative;
+}
+
+.msg-popup__text {
+  @include heading();
+  font-size: 1.8rem;
+  color: $secondary-color;
+  text-align: center;
+}
+
+.msg-popup__close {
+  // position: absolute;
+  // display: block;
+  @include center-y();
+  right: 0;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: $black;
+    transition: $global-transition;
+  }
+
+  &:hover {
+
+    svg {
+      fill: $primary-color;
+    }
+  }
+}
+
+@include susy-at($small) {
+
+  .msg-popup {
+    padding: $global-padding * 1.5 0;
+  }
+
+  .msg-popup__text {
+    font-size: 2.2rem;
+  }
+
+}
