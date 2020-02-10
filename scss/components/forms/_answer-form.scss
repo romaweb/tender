@@ -1,6 +1,6 @@
 .answer-form {
   width: 100%;
-  padding: $global-padding / 2 gutter();
+  padding: $global-padding / 3 gutter();
   background-color: $white;
   box-shadow: $global-shadow;
 }
@@ -20,7 +20,6 @@
 
 	p {
 		margin: 0;
-		// padding: 0 gutter() / 6;
 		width: 100%;
 		font-size: $small-font-size;
 		line-height: 1;
@@ -28,7 +27,6 @@
 		top: 100%;
 		text-align: left;
 		color: $primary-color;
-		// background-color: $secondary-color;
 	}
 
 	.help-block-error {

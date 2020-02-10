@@ -3,15 +3,20 @@
 }
 
 .tender-item__container {
-
+  margin-bottom: $global-margin / 1.5;
+  padding: $global-padding / 3 gutter();
+  background-color: $white;
+  box-shadow: $global-shadow; 
 }
 
 .tender-item__header {
   width: 100%;
-  margin-bottom: $global-margin / 1.5;
-  padding: $global-padding / 2 gutter();
-  background-color: $white;
-  box-shadow: $global-shadow;
+  padding-bottom: $global-padding / 3;
+  border-bottom: 1px solid $medium-gray;
+  // margin-bottom: $global-margin / 1.5;
+  // padding: $global-padding / 2 gutter();
+  // background-color: $white;
+  // box-shadow: $global-shadow;
 }
 
 .tender-item__header-content {
@@ -61,14 +66,13 @@
 
 .tender-item__descr {
   width: 100%;
-  // margin-bottom: $global-margin / 1.5;
-  padding: 0 gutter();
-  background-color: $white;
-  box-shadow: $global-shadow;
+  // padding: 0 gutter();
+  // background-color: $white;
+  // box-shadow: $global-shadow;
 }
 
 .tender-item__descr-row {
-  padding: $global-padding / 2 0;
+  padding: $global-padding / 3 0;
   border-bottom: 1px solid $medium-gray;
 
   &:last-child {
@@ -122,7 +126,7 @@
 .tender-item__sidebar-item {
   display: flex;
   align-items: center;
-  padding: $global-padding / 2 0;
+  padding: $global-padding / 3 0;
   border-bottom: 1px solid $medium-gray;
 }
 
@@ -156,7 +160,8 @@
 }
 
 .tender-item__timer {
-  padding: $global-padding / 2 0;
+  // padding: $global-padding / 2 0;
+  padding-top: $global-padding / 3;
 }
 
 .tender-item__sidebar-close {
@@ -288,7 +293,33 @@
 
 }
 
-@include susy-at($medium) {
+// @include susy-at($medium) {
+
+  // .tender-item {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: stretch;
+  // }
+
+  // .tender-item__container {
+  //   width: span(8);
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: stretch;
+  // }
+
+  // .tender-item__sidebar {
+  //   width: span(4);
+  // }
+
+  // .tender-item__descr {
+  //   flex: 1 1 auto;
+  // }
+
+// }
+
+
+@include susy-at($large) {
 
   .tender-item {
     display: flex;
@@ -301,6 +332,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    margin-bottom: 0;	
   }
 
   .tender-item__sidebar {
@@ -310,11 +342,6 @@
   .tender-item__descr {
     flex: 1 1 auto;
   }
-
-}
-
-
-@include susy-at($large) {
 
   .tender-item__header-info {
     display: flex;

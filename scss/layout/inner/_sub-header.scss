@@ -17,16 +17,35 @@
     background-color: rgba($secondary-color, .95);
   }
 
+  &--small-padding {
+    padding-top: $global-padding  / 1.5;
+  }
+
+}
+
+.sub-header__wrap {
+  @include container(1200px);
 }
 
 .sub-header__breadcrumbs {
   margin-bottom: $global-margin / 2;
+  padding-left: gutter();
 }
+
 
 @include susy-at($small) {
 
   .sub-header {
     padding: $global-padding * 2 0;
+
+    &--small-padding {
+      padding-top: $global-padding  / 1.5;
+      padding-bottom: $global-padding * 1.5;
+    }
+  }
+
+  .sub-header__breadcrumbs {
+    padding-left: gutter();
   }
 
 }
