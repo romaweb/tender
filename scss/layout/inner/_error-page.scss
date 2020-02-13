@@ -1,0 +1,166 @@
+.error-page {
+  padding-bottom: $global-padding;
+  background-color: $light-gray;
+}
+
+.error-page__wrap {
+  @include container();
+}
+
+.error-page__container {
+  position: relative;
+  z-index: 3;
+  margin-top: -$global-margin;
+  padding: $global-padding / 1.5 gutter();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $white;
+  box-shadow: $global-shadow;
+}
+
+.error-page__text {
+  display: block;
+}
+
+.error-page__code {
+  @include heading();
+  padding: 0 gutter();
+  margin-bottom: $global-margin / 2;
+  font-weight: $global-weight-extra-bold;
+  font-size: 7.6rem;
+  color: $primary-color;
+  background-color: $light-gray;
+
+  &--secondary {
+    color: $secondary-color;
+  }
+}
+
+.error-page__heading {
+  @include heading();
+  margin-bottom: $global-margin / 6;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: $black;
+  text-align: center;
+}
+
+.error-page__descr {
+  margin: 0;
+  margin-bottom: $global-margin / 2;
+  display: block;
+  text-align: center;
+}
+
+.error-page__btn {
+  margin: auto;
+}
+
+// .tender-page__tender-item {
+//   position: relative;
+//   z-index: 3;
+//   margin-top: -$global-margin;
+//   margin-bottom: $global-margin / 1.5;
+
+// }
+
+// @include susy-at($xsmall) {
+
+//   .tender-page__wrap {
+//     @include container(520px);
+//   } 
+
+// }
+// @include susy-at($small) {
+
+//   .tender-page {
+//     padding-bottom: $global-padding * 2;
+//   }
+
+//   .tender-page__wrap {
+//     @include container(680px);
+//   } 
+
+
+// }
+
+@include susy-at($xsmall) {
+
+  .error-page__code {
+    font-size: 8.4rem;
+  }
+
+}
+
+@include susy-at($small) {
+
+  .error-page__code {
+    font-size: 12rem;
+  }
+
+  .error-page__heading {
+    font-size: 2.4rem;
+  }
+
+}
+
+@include susy-at($medium) {
+
+  .error-page {
+    padding-bottom: $global-padding * 2;
+  }
+
+  .error-page__wrap {
+    @include container(1200px);
+  }
+
+  .error-page__container {
+    padding: $global-padding * 1.5 gutter();
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .error-page__code {
+    margin-bottom: 0;
+    font-size: 15rem;
+    margin-right: gutter();
+    flex: 0 0 auto;
+  }
+
+  .error-page__heading {
+    text-align: left;
+    font-size: 2.8rem;
+  }
+
+  .error-page__descr {
+    text-align: left;
+    flex: 1 1 auto;
+  }
+
+  .error-page__btn {
+    margin: 0;
+  }
+
+}
+
+@include susy-at($large) {
+
+  .error-page__container {
+    padding: $global-padding * 2 gutter();
+  }
+
+  .error-page__code {
+    font-size: 17rem;
+  }
+
+  .error-page__heading {
+    font-size: 3rem;
+  }
+
+  .error-page__descr {
+    font-size: 1.8rem;
+  }
+
+}
