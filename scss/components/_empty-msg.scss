@@ -1,0 +1,15 @@
+.empty-msg {
+  margin: 0;
+  @include sub-heading();
+  color: $black;
+  text-align: center;
+  font-size: 2rem;
+}
+
+@include susy-at($small) {
+
+  .empty-msg {
+    font-size: 2.4rem;
+  }
+
+}
