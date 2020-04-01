@@ -21,6 +21,7 @@
 @import "components/feature-item";
 @import "components/counter-item";
 @import "components/timer";
+@import "components/table";
 
 // Buttons
 @import "components/buttons/buttons";
@@ -105,7 +106,7 @@
 // Forms
 // @import "components/info-bar";
 
-// @import "components/forms/checkbox";
+@import "components/forms/custom-checkbox";
 // @import "components/forms/radio";
 // @import "components/forms/quantity";
 @import "components/forms/input-field";
@@ -117,6 +118,7 @@
 // @import "components/forms/user-form";
 @import "components/forms/contact-form";
 @import "components/forms/answer-form";
+@import "components/forms/complex-answer-form";
 @import "components/forms/application-form";
 @import "components/forms/options-form";
 // @import "components/forms/subscribe";

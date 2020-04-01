@@ -1,0 +1,65 @@
+.table {
+  overflow-x: auto;
+  
+}
+
+.table-item {
+  width: 800px;
+  border-collapse: collapse;
+  background-color: $white;
+  font-size: 1.5rem;
+}
+
+.table__row-heading {
+  background-color: $secondary-color;
+}
+
+.table__heading {
+  color: $white;
+  text-align: left;
+  padding: $global-padding / 6 10px;
+}
+
+.table__col {
+  border: 1px solid $global-border-color;
+  padding: $global-padding / 6 10px;
+  text-align: left;
+}
+
+.table__col-container {
+  display: flex;
+  align-items: center;
+  max-width: 360px;
+}
+
+.table__col-text {
+  margin-right: gutter();
+  flex: 1 0 auto;
+  display: block;
+  font-weight: $global-weight-bold;
+}
+
+.table__input-field {
+  flex: 0 1 auto;
+  width: 300px;
+}
+
+@include susy-at($medium) {
+
+  .table  {
+    overflow: hidden;
+  }
+
+  .table-item {
+    width: 100%;
+  }
+
+  .table__heading {
+    padding: $global-padding / 4 10px;
+  }
+
+  .table__col {
+    padding: $global-padding / 4 10px;
+  }
+
+}

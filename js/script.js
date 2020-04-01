@@ -53,3 +53,18 @@ if (formMsgPopup && formMsgPopupClose) {
 
   });
 }
+
+
+var deviveryCheckbox = document.querySelector(".complex-answer-form__custom-checkbox-input"),
+    deviveryPrice = document.querySelector(".complex-answer-form__input-field");
+
+if (deviveryCheckbox && deviveryPrice) {
+  deviveryCheckbox.addEventListener("click", function() {
+    if (deviveryCheckbox.checked == true) {
+      deviveryPrice.setAttribute('disabled', 'disabled');
+      } else {
+      deviveryPrice.removeAttribute('disabled');
+    }
+  });
+
+}

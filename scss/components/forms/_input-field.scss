@@ -16,12 +16,30 @@
 		border-color: $primary-color;
 		background: $white;
 	}
+
+	&:disabled {
+		border-color: lighten($medium-gray, 10);
+		background-color: $white;
+		cursor: not-allowed;
+
+		&::placeholder {
+			color: lighten($medium-gray, .05);
+		}
+	}
+
+	&--small {
+			padding: $global-padding / 3.4 $global-padding / 4.4;
+	}
 }
 
 @include breakpoint(small) {
 
 	.input-field {
 		padding: $global-padding / 2.2 $global-padding / 3;
+
+		&--small {
+			padding: $global-padding / 2.8 $global-padding / 4;
+		}
 	}
 
 }

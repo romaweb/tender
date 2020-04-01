@@ -47,5 +47,10 @@
 }
 
 @include susy-at($xlarge) {
-  padding: $global-padding * 2  gutter();
+
+  .category-item {
+    padding: $global-padding * 2  gutter();
+  }
+
+    
 }
