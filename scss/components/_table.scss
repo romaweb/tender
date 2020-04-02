@@ -18,12 +18,21 @@
   color: $white;
   text-align: left;
   padding: $global-padding / 6 10px;
+  line-height: 1.1;
 }
 
 .table__col {
   border: 1px solid $global-border-color;
   padding: $global-padding / 6 10px;
   text-align: left;
+
+  &:first-child {
+    border-left: 0;
+  }
+
+  &:first-child {
+    border-right: 0;
+  }
 }
 
 .table__col-container {
